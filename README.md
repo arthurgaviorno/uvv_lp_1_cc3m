@@ -5,6 +5,12 @@
 ### Turma: CC3M
 
 ----------------
+
+# Confirmação dos Testes: 
+
+![image](https://github.com/arthurgaviorno/uvv_lp_1_cc3m/assets/103372834/d2475059-b2e7-4c8e-a52a-ccf5b099ab4f)
+
+-----------------
  
 # Questionário: 
 
@@ -56,7 +62,7 @@ Na questão 3 seguindo a lógica, do que foi explicado no arquivo PDF e de acord
 - O resultado será o resultado da conta acima "Ox, y": <br/>
   Resultado: 32,76 <br/>
   
-  ## Questão 4: 
+## Questão 4: 
   
   - Código: 
   ~~~~
@@ -85,7 +91,13 @@ Na questão 3 seguindo a lógica, do que foi explicado no arquivo PDF e de acord
   
 ## Questão 5: 
 
-Obs.: Imagem "cat.png" utilizando uma box blur de valor (5) está dentro de 'resultado_imagens' neste repositório.
+- Nao sei explicar ao certo qual o kernel devo utilizar mas o resultado é a seguinte imagem: <br/>
+
+![python_nitida](https://github.com/arthurgaviorno/uvv_lp_1_cc3m/assets/103372834/99d96c78-72fa-4aad-82a1-b84b7f555fc0)
+
+Obs.: Imagem do gato borrada da sessão 5.1 <br/>
+![cat_desfoque](https://github.com/arthurgaviorno/uvv_lp_1_cc3m/assets/103372834/9828b0d4-5a41-465c-941b-4c00badd0216)
+
 
 ## Questão 6: 
 
@@ -94,6 +106,13 @@ Obs.: Imagem "cat.png" utilizando uma box blur de valor (5) está dentro de 'res
 -1 -2 -1
  0  0  0
  1  2  1
+~~~~
+- Através do código: 
+~~~~
+imagem = Imagem.carregar('test_images/construct.png')
+    apenasKy = imagem.correlacao(Ky)
+    Imagem.salvar(apenasKy, 'resultados_imagens/construct_Ky.png')
+
 ~~~~
  É o responsável por fazer a detecção de bordas da imagem no eixo Y, sendo assim trará como resultado a seguinte imagem: 
  
@@ -105,6 +124,13 @@ Obs.: Imagem "cat.png" utilizando uma box blur de valor (5) está dentro de 'res
 -2  0  2
 -1  0  1
 ~~~~
+- Através do código: 
+~~~~
+imagem = Imagem.carregar('test_images/construct.png')
+    apenasKx = imagem.correlacao(Kx)
+    Imagem.salvar(apenasKx, 'resultados_imagens/construct_Kx.png')
+~~~~
+
 É o responsável por fazer a detecção de bordas da imagem no eixo X, sendo assim trará como resultado a seguinte imagem: 
 
 ![construct_Kx](https://github.com/arthurgaviorno/uvv_lp_1_cc3m/assets/103372834/b841ef72-5b70-44b8-9ed7-7e41232ca399)
@@ -112,6 +138,14 @@ Obs.: Imagem "cat.png" utilizando uma box blur de valor (5) está dentro de 'res
 Portanto se aplicarmos ambos os kernel para filtrar a imagem, teremos uma imagem com todas as bordas destacadas, tanto as de Ky, quanto as de Ky:
 
 ![construct_KxKy](https://github.com/arthurgaviorno/uvv_lp_1_cc3m/assets/103372834/8805918e-75d0-4c6e-8a3e-5d733c217c9f)
+
+- Código utilizado para Kx e Ky simultaneamente:
+~~~~
+imagem = Imagem.carregar('test_images/construct.png')
+    KxKy= imagem.bordas()
+    Imagem.salvar(KxKy, 'resultados_imagens/construct_KxKy.png')
+
+~~~~
 
 
 
