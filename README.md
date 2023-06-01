@@ -87,6 +87,35 @@ Na questão 3 seguindo a lógica, do que foi explicado no arquivo PDF e de acord
 
 Obs.: Imagem "cat.png" utilizando uma box blur de valor (5) está dentro de 'resultado_imagens' neste repositório.
 
+## Questão 6: 
+
+- O kernel Ky: 
+~~~~
+-1 -2 -1
+ 0  0  0
+ 1  2  1
+~~~~
+ É o responsável por fazer a detecção de bordas da imagem no eixo Y, sendo assim trará como resultado a seguinte imagem: 
+ 
+ ![construct_Ky](https://github.com/arthurgaviorno/uvv_lp_1_cc3m/assets/103372834/b98297a2-51da-4f05-acfb-358db7eaed4f)
+
+- O kernel Kx: 
+~~~~
+-1  0  1
+-2  0  2
+-1  0  1
+~~~~
+É o responsável por fazer a detecção de bordas da imagem no eixo X, sendo assim trará como resultado a seguinte imagem: 
+
+![construct_Kx](https://github.com/arthurgaviorno/uvv_lp_1_cc3m/assets/103372834/b841ef72-5b70-44b8-9ed7-7e41232ca399)
+
+Portanto se aplicarmos ambos os kernel para filtrar a imagem, teremos uma imagem com todas as bordas destacadas, tanto as de Ky, quanto as de Ky:
+
+![construct_KxKy](https://github.com/arthurgaviorno/uvv_lp_1_cc3m/assets/103372834/8805918e-75d0-4c6e-8a3e-5d733c217c9f)
+
+
+
+
 
 
  
