@@ -302,9 +302,9 @@ if __name__ == '__main__':
     ##Questao 5
 
     
-    imagem = Imagem.carregar('test_images/mushroom.png')
+    imagem = Imagem.carregar('test_images/python.png')
     nitidez = imagem.focada(11)
-    Imagem.salvar(nitidez, 'resultados_imagens/mushroom2.png')
+    Imagem.salvar(nitidez, 'resultados_imagens/python_focada.png')
 
 
     ##Imagem do gato pedida no decorrer da sessão 5 do PDF.
